@@ -1,0 +1,35 @@
+<service>
+    <provider>Ricardo Inc.</provider>
+    <serviceID>resfct</serviceID>
+    <type>food services</type>
+       <tags>
+          <tag>almoço</tag>
+          <tag>jantar</tag>
+          <tag>fome</tag>
+          <tag>comida</tag>
+          <tag>comer</tag>
+          <tag>lanche</tag>
+      </tags>
+    <search>yes</search>
+    <referedEntities>
+        <entity>location</entity>
+    </referedEntities>
+    <informedEntities>
+        <entity>restaurant</entity>
+    </informedEntities>
+    <competences >
+        <competence path="" httpOp="GET">
+            <description>Esta operação devolve uma lista de estabelecimentos</description>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>restaurante</tag>
+                <tag>estabelecimento</tag>
+            </tags>
+        </competence>
+    </competences>
+</service>
+

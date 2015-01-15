@@ -1,0 +1,43 @@
+<service name="PessoasFCT" url="http://www.pessoasfct.com">
+    <provider>Luis Industries Inc.</provider>
+    <serviceID>pfct</serviceID>
+    <type>academics</type>
+    <tags> 
+        <tag>pessoa</tag>
+        <tag>docente</tag>
+        <tag>aluno</tag>
+        <tag>professor</tag>
+        <tag>estudante</tag>
+    </tags>
+    <search>yes</search>
+    <referedEntities>
+        <entity>sala</entity>
+        <entity>departamento</entity>
+        <entity>edificio</entity>
+        <entity>cadeira</entity>
+        <entity>curso</entity>
+    </referedEntities>
+    <informedEntities>
+        <entity>pessoa</entity>
+        <entity>docente</entity>
+        <entity>aluno</entity>
+    </informedEntities>
+    <competences>
+        <competence path="pessoas" op="GET">
+            <descricao>Esta operação devolve uma lista de pessoas</descricao>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg> 
+                <arg optional="true">dep</arg>
+                <arg optional="true">type</arg>
+                <arg optional="true">query</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>pessoa</tag>
+                <tag>aluno</tag>
+                <tag>docente</tag>
+            </tags>
+        </competence>
+    </competence>
+</service>

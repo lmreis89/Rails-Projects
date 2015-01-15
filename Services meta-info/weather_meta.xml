@@ -1,0 +1,28 @@
+
+<service name="FCT Weather url="http://www.service_name.com">
+    <provider>Ricardo Inc</provider>
+    <servideID>fctweather</serviceID>
+    <type>metereology</type>
+    <tags> 
+        <tag>Weather</tag>
+        <tag>Metereology</tag>
+    </tags>
+    <search>no</search>
+    <referedEntities>
+    </referedEntities>
+    <informedEntities>
+        <entity>Temperatura</entity>
+    </informedEntities>
+    <competences >
+        <competence path="weather" op="GET">
+            <description>Esta operação devolve a temperatura nos proximos quatro dias na FCT</description>
+            <arglist>
+            </arglist>
+            <interactionType>assisted<interactionType>
+            <tags>
+                <tag>weather</tag>
+                <tag>metereology</tag>
+            </tags>
+        </competence>
+    </competences>
+</service>

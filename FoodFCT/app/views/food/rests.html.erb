@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>restaurantes</title>
+</head>
+<body>
+    <h1>Listing restaurants</h1>
+    <p><%= Restaurant.count %></p>
+    <ul>
+    <% Restaurant.all.each do |r| %>
+        <li><a><%= r.name %></a></li>
+    <% end %>
+    </ul>
+</body>
+</html>

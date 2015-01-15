@@ -1,0 +1,40 @@
+<service name="ASK FCT" url="http://askfct/">
+    <provider>Pedro Inc</provider>
+    <servideID>askfct</serviceID>
+    <type>news(?!??)</type>
+    <tags> 
+        <tag>FAQ</tag>
+        <tag>question</tag>
+		<tag>ask</tag>
+    <search>yes</search>
+    <referedEntities>
+    </referedEntities>
+    <informedEntities>
+    </informedEntities>
+    <competences>
+        <competence path="questions" op="GET">
+            <description>Esta operacao devolve uma lista de perguntas</description>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg>
+                <arg optional="true">q</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>question</tag>
+                <tag>FAQ</tag>
+            </tags>
+        </competence>
+        <competence path ="questions" op="POST">
+            <description> Esta operacao permite inserir uma pergunta</description>
+            <arglist/>
+			
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag> cadeira</tag>
+                <tag> curso </tag>
+                <tag> ECTS </tag>
+                <tag> disciplina</tag>
+        </competence>
+    </competences>
+</service>

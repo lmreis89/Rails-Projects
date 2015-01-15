@@ -1,0 +1,90 @@
+<service name="ASK FCT" url="http://unidadesorganizativasfct/">
+    <provider>Pedro Inc</provider>
+    <servideID>askfct</serviceID>
+    <type></type>
+    <tags> 
+		<tag>servico</tag>
+		<tag>orgaos</tag>
+		<tag>departamento</tag>
+		<tag>unidade</tag>
+		<tag>director</tag>
+        <tag>seccao</tag>
+        <tag>divisao</tag>
+        <tag>academica</tag>
+        <tag>executivo</tag>
+        <tag>director</tag>
+		<tag>conselho</tag>
+		<tag>gestao</tag>
+		<tag>cientifico</tag>
+		<tag>pedagogico</tag>
+		<tag>informatica</tag>
+		<tag>cultura</tag>
+		<tag>comunicacao</tag>
+		<tag>director</tag>
+		<tag>financas</tag>
+		<tag>contabilidade</tag>
+		<tag>tesouraria</tag>
+		<tag>inventario</tag>
+		<tag>pessoal</tag>
+		<tag>vencimentos</tag>
+		<tag>abonos</tag>
+		<tag>director</tag>
+		<tag>expediente</tag>
+		<tag>manutencao</tag>
+		<tag>fiscalizacao</tag>
+		<tag>seguranca</tag>
+		<tag>planeamento</tag>
+    <search>yes</search>
+    <referedEntities>
+        <entity>person</entity>
+		<entity>building</entity>
+		<entity>room</entity>
+		<entity>course</entity>
+		<entity>degree</entity>
+    </referedEntities>
+    <informedEntities>
+        <entity>organizational unit</entity>
+    </informedEntities>
+    <competences>
+        <competence path="orgaos" op="GET">
+            <description>Esta operação devolve uma lista de orgaos</description>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>orgao</tag>
+                <tag>conselho</tag>
+                <tag>director</tag>
+                <tag>...</tag>
+            </tags>
+        </competence>
+        <competence path ="servicos" op="GET">
+            <description> Esta operação devolve uma lista de servicos</description>
+            <arglist>
+                   <arg optional="false">start</arg>
+                   <arg optional="false">end</arg>
+			   </arglist>
+             <interactionType>assisted</interactionType>
+              <tags>
+                  <tag>servico</tag>
+                  <tag>divisao</tag>
+                  <tag>seccao</tag>
+                  <tag>...</tag>
+          </competence>
+		  <competence path ="departamentos" op="GET">
+            <description> Esta operação devolve uma lista de departamntos</description>
+            <arglist>
+                   <arg optional="false">start</arg>
+                   <arg optional="false">end</arg>
+			   </arglist>
+             <interactionType>assisted</interactionType>
+              <tags>
+                  <tag>departamento</tag>
+                  <tag>investigacao</tag>
+                  <tag>...</tag>
+                  <tag>...</tag>
+          </competence>
+    </competences>
+</service>

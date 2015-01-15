@@ -1,0 +1,54 @@
+<service name="Cadeiras e Cursos" url="http://www.fctcec.com">
+    <provider>Luis Inc</provider>
+    <servideID>fctcec</serviceID>
+    <type>academics</type>
+    <tags> 
+        <tag>cadeira</tag>
+        <tag>curso</tag>
+        <tag>disciplina</tag>
+        <tag>ECTS</tag>
+        <tag>coordenador</tag>
+    <search>yes</search>
+    <referedEntities>
+        <entity>pessoa</entity>
+    </referedEntities>
+    <informedEntities>
+        <entity>Cadeira</entity>
+        <entity>Curso/entity>
+        <entity>Créditos</entity>
+        <entity>Coordenador</entity>
+    </informedEntities>
+    <competences >
+        <competence path="cursos" op="GET">
+            <description>Esta operação devolve uma lista de cursos</description>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg>
+                <arg optional="true">q</arg>
+                <arg optional ="true">cd</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>ECTS</tag>
+                <tag>coordenador</tag>
+                <tag>cadeira</tag>
+                <tag>curso</tag>
+            </tags>
+        </competence>
+        <competence path ="cadeiras" op="GET">
+            <description> Esta operação devolve uma lista de cadeiras</description>
+            <arglist>
+                   <arg optional="false">start</arg>
+                   <arg optional="false">end</arg>
+                   <arg optional="true">q</arg>
+                   <arg optional ="true">cs</arg>
+             </arglist>
+             <interactionType>assisted</interactionType>
+              <tags>
+                  <tag> cadeira</tag>
+                  <tag> curso </tag>
+                  <tag> ECTS </tag>
+                  <tag> disciplina</tag>
+          </competence>
+    </competences>
+</service>

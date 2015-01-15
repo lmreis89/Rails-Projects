@@ -1,0 +1,37 @@
+<service>
+    <provider>Ricardo Inc.</provider>
+    <serviceID>eventfct</serviceID>
+    <type>advertisement</type>
+       <tags>
+          <tag>evento</tag>
+          <tag>divertir</tag>
+          <tag>conferencia</tag>
+          <tag>conference</tag>
+          <tag>forum</tag>
+          <tag>noticia</tag>
+         <tag>news</tag>
+      </tags>
+    <search>no</search>
+    <referedEntities>
+      <entity>location</entity>
+    </referedEntities>
+    <informedEntities>
+        <entity>advert</entity>
+      <entity>event</entity>
+    </informedEntities>
+    <competences >
+        <competence path="" httpOp="GET">
+            <description>Esta operação devolve uma lista de noticias e eventos</description>
+            <arglist>
+                <arg optional="false">start</arg>
+                <arg optional="false">end</arg>
+            </arglist>
+            <interactionType>assisted</interactionType>
+            <tags>
+                <tag>evento</tag>
+                <tag>noticia</tag>
+            </tags>
+        </competence>
+    </competences>
+</service>
+
